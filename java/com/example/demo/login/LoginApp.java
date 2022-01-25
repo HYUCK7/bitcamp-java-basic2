@@ -1,5 +1,15 @@
 package com.example.demo.login;
-
+/**
+ * packageName: com.example.login
+ * fileName   : LoginApp.java
+ * author     : HYUCK7
+ * date       : 2022-01-24
+ * desc       : 아이디와 비밀번호, 이름을 입력하면 로그인 하는 앱
+ * ================================
+ * DATE            AUTHOR         NOTE
+ * ================================
+ * 2022-01-24       HYUCK7        최초 생성
+ */
 public class LoginApp {
         private String ID;
         private String PW;
