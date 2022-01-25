@@ -20,7 +20,18 @@ public class CalcApp {
             this. num1 = num1;
             this. opcode = opcode;
             this. num2 = num2;
-            return String.format( "%d %s %d = %d", this.num1, this.opcode, this.num2, num1 + num2 );
+            int res = 0;
+            if(opcode.equals("+")){
+                res = num1 + num2;
+            }else if(opcode.equals("-")){
+                res = num1 - num2;
+            }else if(opcode.equals("*")){
+                res = num1 * num2;
+            }else if(opcode.equals("/")){
+                res = num1 / num2;
+            }
+
+            return String.format( "%d %s %d = %d", this.num1, this.opcode, this.num2, res );
         }
 
 }
