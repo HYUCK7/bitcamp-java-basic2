@@ -9,6 +9,7 @@ package com.example.demo.login;
  * DATE            AUTHOR         NOTE
  * ================================
  * 2022-01-24         HYUCK7        최초 생성
+ * 2022-01-26         HYUCK7        if절 추가
  */
 import java.util.Scanner;
 

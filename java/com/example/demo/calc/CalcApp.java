@@ -9,6 +9,7 @@ package com.example.demo.calc;
  * DATE            AUTHOR         NOTE
  * ================================
  * 2022-01-24         HYUCK7        최초 생성
+ * * 2022-01-26       HYUCK7        if절 추가 및 4칙 연산 가능하도록 개선
  */
 public class CalcApp {
         int num1;
@@ -22,14 +23,17 @@ public class CalcApp {
             this. num2 = num2;
             int res = 0;
             if(opcode.equals("+")){
-                res = num1 + num2;
+                res = this.num1 + this.num2;
             }else if(opcode.equals("-")){
-                res = num1 - num2;
+                res = this.num1 - this.num2;
             }else if(opcode.equals("*")){
-                res = num1 * num2;
+                res = this.num1 * this.num2;
             }else if(opcode.equals("/")){
-                res = num1 / num2;
-            }
+                res = this.num1 / this.num2;
+            }else res = 0;
+
+            //switch() {}
+
 
             return String.format( "%d %s %d = %d", this.num1, this.opcode, this.num2, res );
         }

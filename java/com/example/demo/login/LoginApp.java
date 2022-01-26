@@ -9,6 +9,7 @@ package com.example.demo.login;
  * DATE            AUTHOR         NOTE
  * ================================
  * 2022-01-24       HYUCK7        최초 생성
+ * 2022-01-26       HYUCK7        if절 추가
  */
 public class LoginApp {
         private String ID;
@@ -20,8 +21,11 @@ public class LoginApp {
                         this. ID = ID;
                         this. PW = PW;
                         this. name = name;
+                        String res = "";
+                        if(PW.equals("abc")) {
+                                res = String.format(" %s 님의 비밀번호 %s가 맞습니다. 로그인 성공 ", this.name, this.PW);
+                        }else res = String.format(" %s 님의 ID는 맞으나, PW %s 가 틀립니다. 로그인 실패 ", this.ID, this.PW);
 
-                        return String.format("Hello, ID: %s, PW: %s, name: %s" ,
-                        this.ID, this.PW, this.name);
+                        return res;
                 }
 }

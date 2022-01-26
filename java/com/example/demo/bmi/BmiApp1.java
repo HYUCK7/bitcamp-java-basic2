@@ -12,14 +12,26 @@ package com.example.demo.bmi;
  * 2022-01-25         HYUCK7         최초 생성
  */
 public class BmiApp1 {
-    private int kg;
-    private int cm;
-    public static String APP_NAME = "BMI.APP";
+    double kg;
+    double cm;
+    static String APP_NAME = "BMI.App";
 
-    public String bmi(int kg, int cm){
+    public String bmi(double kg, double cm) {
         this.kg = kg;
         this.cm = cm;
-        String res = String.format("키는 %d, 몸무게는 %d 이므로 정상입니다.",this.cm, this.kg);
-        return res;
+        double res = kg / (cm*cm);
+        if(res <=18.5){
+            System.out.println("저체중입니다.");
+        }else if(res<=23) {
+            System.out.println("정상입니다.");
+        }else if(res<=25){
+            System.out.println("과체중입니다.");
+        }else if(res<=30) {
+            System.out.println("비만입니다.");
+        }else if(30<res){
+            System.out.println("고도비만입니다.");}
+
+            return String.format("몸무게는 %f, 키는 %f로, BMI 지수는 %f ",
+                    this.kg, this.cm, res);
     }
 }
