@@ -13,7 +13,7 @@ package com.example.demo.login;
  */
 public class LoginApp {
         private String ID;
-        private String PW;
+        private String PW ;
         private String name;
         static String LOGIN_APP = "     <<<LOGIN APP>>>        ";
 
@@ -22,10 +22,15 @@ public class LoginApp {
                         this. PW = PW;
                         this. name = name;
                         String res = "";
+                        /**
                         if(PW.equals("abc")) {
                                 res = String.format(" %s 님의 비밀번호 %s가 맞습니다. 로그인 성공 ", this.name, this.PW);
                         }else res = String.format(" %s 님의 ID는 맞으나, PW %s 가 틀립니다. 로그인 실패 ", this.ID, this.PW);
-
+*/
+                        switch(PW){
+                                case("abc"): res = String.format(" %s 님의 비밀번호 %s가 맞습니다. 로그인 성공 ", this.name, this.PW); break;
+                                default: res = String.format(" %s 님의 ID는 맞으나, PW %s 가 틀립니다. 로그인 실패 ", this.ID, this.PW);
+                        }
                         return res;
                 }
 }

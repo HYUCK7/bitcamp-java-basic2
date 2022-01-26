@@ -30,8 +30,5 @@ public class CalcDemo {
 
         String result = calcApp.calc(num1, opcode, num2);
         System.out.println(result);
-
-
-
     }
 }
