@@ -14,7 +14,7 @@ package com.example.demo.bmi;
 public class BmiApp1 {
     double kg;
     double cm;
-    static String APP_NAME = "BMI.App";
+    public static String APP_NAME = "BMI.App";
 
     public String bmi(double kg, double cm) {
         this.kg = kg;

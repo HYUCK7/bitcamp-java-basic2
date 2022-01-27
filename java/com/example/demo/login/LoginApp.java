@@ -16,7 +16,7 @@ public class LoginApp {
         private String PW ;
         private String name;
         static String PASSWORD = "abc";
-        static String LOGIN_APP = "     <<<LOGIN APP>>>        ";
+        public static String LOGIN_APP = "     <<<LOGIN APP>>>        ";
 
                 public String login(String ID, String PW, String name) {
                         this. ID = ID;

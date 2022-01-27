@@ -16,15 +16,9 @@ import java.util.Scanner;
  * 2022-01-25         HYUCK7         최초 생성
  */
 public class GoogleDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String execute(String url) {
         GoogleApp googleApp = new GoogleApp();
+        return googleApp.google(url);
 
-        System.out.println(GoogleApp.WEB_LOGO);
-        System.out.println("Google 검색 또는 URL 입력");
-        String url = scanner.next();
-
-        String res = googleApp.google(url);
-        System.out.println("검색 결과: " + res);
     }
 }

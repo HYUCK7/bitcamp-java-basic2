@@ -15,7 +15,7 @@ public class CalcApp {
         int num1;
         String opcode;
         int num2;
-        static String CALC_APP ="   <<<Calc.com>>>  ";
+        public static String CALC_APP ="   <<<Calc.com>>>  ";
 
         public String calc(int num1, String opcode, int num2) {
             this. num1 = num1;

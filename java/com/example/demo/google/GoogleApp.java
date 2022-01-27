@@ -19,6 +19,6 @@ public class GoogleApp {
 
     public String google(String url) {
         this.url = url;
-        return String.format("%s",this.url);
+        return String.format("검색 결과 : %s",this.url);
     }
 }
