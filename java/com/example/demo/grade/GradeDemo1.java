@@ -17,16 +17,18 @@ public class GradeDemo1 {
     public static void main(String[] args) {
         GradeApp1 gradeApp1 = new GradeApp1();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("이름: ");
-        String name = scanner.next();
-        System.out.println("국어 점수: ");
-        int kor = scanner.nextInt();
-        System.out.println("영어 점수: ");
-        int eng = scanner.nextInt();
-        System.out.println("수학 점수: ");
-        int math = scanner.nextInt();
+        for(int i=1; i<3; i++) {
+            System.out.println(i + "번 학생이름: ");
+            String name = scanner.next();
+            System.out.println("국어 점수: ");
+            int kor = scanner.nextInt();
+            System.out.println("영어 점수: ");
+            int eng = scanner.nextInt();
+            System.out.println("수학 점수: ");
+            int math = scanner.nextInt();
 
-        String res = gradeApp1.getGrade1(name, kor, eng, math);
-        System.out.println(res);
+            String res = gradeApp1.getGrade1(name, kor, eng, math);
+            System.out.println(res);
+        }
     }
 }
