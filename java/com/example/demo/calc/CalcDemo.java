@@ -15,7 +15,7 @@ package com.example.demo.calc;
 import java.util.Scanner;
 
 public class CalcDemo {
-    public static void main(String[] args) {
+    public void execute() {
         Scanner scanner = new Scanner(System.in);
         CalcApp calcApp = new CalcApp();
 

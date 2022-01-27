@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.calc.CalcDemo;
 import org.yaml.snakeyaml.emitter.ScalarAnalysis;
 
 import java.util.Scanner;
@@ -18,6 +19,7 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        CalcDemo calcDemo = new CalcDemo();
         for(int i=0; i<2; i++) {
             System.out.println("메뉴 선택");
             String menu = "1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
@@ -30,6 +32,7 @@ public class DemoController {
                     break;
                 case "2":
                     res = "2.CALC";
+                    calcDemo.execute();
                     break;
                 case "3":
                     res = "3.SEARCH";
