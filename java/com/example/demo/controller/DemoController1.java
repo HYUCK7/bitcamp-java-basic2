@@ -1,14 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.bmi.BmiApp1;
-import com.example.demo.bmi.BmiDemo1;
-import com.example.demo.calc.CalcApp;
-import com.example.demo.calc.CalcDemo;
-import com.example.demo.google.GoogleApp;
-import com.example.demo.google.GoogleDemo;
-import com.example.demo.grade.GradeApp;
-import com.example.demo.login.LoginApp;
-import com.example.demo.login.LoginDemo;
+import com.example.demo.domain.*;
+import com.example.demo.service.*;
 
 import java.util.Scanner;
 
@@ -26,39 +19,72 @@ import java.util.Scanner;
 public class DemoController1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalcDemo calcDemo = new CalcDemo();
-        BmiDemo1 bmiDemo1 = new BmiDemo1();
-        GoogleDemo googleDemo = new GoogleDemo();
-        GradeApp gradeApp = new GradeApp();
-        LoginDemo loginDemo = new LoginDemo();
+
+        CalcService calcService = new CalcService();
+        CalcDTO calc = new CalcDTO();
+
+        BmiService bmiService = new BmiService();
+        BmiDTO bmi = new BmiDTO();
+
+        GoogleService googleService = new GoogleService();
+        GoogleDTO google = new GoogleDTO();
+
+        GradeService gradeService = new GradeService();
+        GradeDTO grade = new GradeDTO();
+
+        LoginService loginService = new LoginService();
+        LoginDTO login = new LoginDTO();
+
+        HelloService helloService = new HelloService();
+        HelloDTO hello = new HelloDTO();
 
         while(true){
         System.out.println("메뉴 선택");
-        System.out.println("0.EXIT 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN");
-        String select = scanner.next();
+        System.out.println("0.EXIT 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN 6.Hello");
         String res = "";
-        switch(select) {
+        switch(scanner.next()) {
             case "0":
                 System.out.println("EXIT"); return;
             case "1":
-                System.out.println(BmiApp1.APP_NAME + "\n몸무게는: \n키는: ");
-                res = bmiDemo1.execute(scanner.nextDouble(), scanner.nextDouble());
+                System.out.println(BmiDTO.APP_NAME + "\n몸무게는: \n키는: ");
+                bmi.setKg(scanner.nextDouble());
+                bmi.setCm(scanner.nextDouble());
+                res = bmiService.getBMI(bmi);
                 break;
             case "2":
-                System.out.println(CalcApp.CALC_APP + "\n첫 번째 숫자: \n연산기호: \n두 번째 숫자: ");
-                res = calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt());
+                System.out.println(CalcDTO.CALC_APP + "\n첫 번째 숫자: \n연산기호: \n두 번째 숫자: ");
+                calc.setNum1(scanner.nextInt());
+                calc.setOpcode(scanner.next());
+                calc.setNum2(scanner.nextInt());
+                res = calcService.getCalc(calc);
                 break;
             case "3":
-                System.out.println(GoogleApp.WEB_LOGO + "\n검색어를 입력하세요 : ");
-                res = googleDemo.execute(scanner.next());
+                System.out.println(GoogleDTO.WEB_LOGO + "\n검색어를 입력하세요 : ");
+                google.setUrl(scanner.next());
+                res = googleService.getUrl(google);
                 break;
             case "4":
-                res = "4.GRADE";
+                System.out.println(GradeDTO.GRADE_MARK + "\n 이름: 국어: 영어: 수학: ");
+                grade.setName(scanner.next());
+                grade.setKor(scanner.nextInt());
+                grade.setEng(scanner.nextInt());
+                grade.setMath(scanner.nextInt());
+                res = gradeService.execute(grade);
                 break;
             case "5":
-                System.out.println(LoginApp.LOGIN_APP + "\nID: \nPW: \nNAME: ");
-                res = loginDemo.execute(scanner.next(), scanner.next(), scanner.next());
+                System.out.println(LoginDTO.LOGIN_APP + "\nID: \nPW: \nNAME: ");
+                login.setID(scanner.next());
+                login.setPW(scanner.next());
+                login.setName(scanner.next());
+                res = loginService.getLogin(login);
                 break;
+            case "6":
+                System.out.println(HelloDTO.HELLO_APP + "\nname : \nage: ");
+                hello.setName(scanner.next());
+                hello.setAge(scanner.nextInt());
+                res = helloService.execute(hello);
+                break;
+
             default:
                 res = "NO VALUE";
                 break;

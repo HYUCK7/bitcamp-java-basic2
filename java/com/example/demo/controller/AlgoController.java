@@ -1,4 +1,7 @@
-package com.example.demo.algorithm;
+package com.example.demo.controller;
+
+import com.example.demo.algorithm.Queue;
+import com.example.demo.algorithm.Stack;
 
 import java.util.Scanner;
 

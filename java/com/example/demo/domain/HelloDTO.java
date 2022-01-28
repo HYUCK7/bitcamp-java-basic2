@@ -1,4 +1,4 @@
-package com.example.demo.hello;
+package com.example.demo.domain;
 /**
  * packageName: com.example.hello
  * fileName   : HelloApp.java
@@ -10,15 +10,22 @@ package com.example.demo.hello;
  * ================================
  * 2022-01-24         HYUCK7        최초 생성
  */
-public class HelloApp {
+public class HelloDTO {
     String name;
     int age;
-    static String HELLO_APP = "헬로우 앱";
+    public static String HELLO_APP = "헬로우 앱";
 
-    public String hello(String name, int age) {
-        this.name = name;
-        this.age = age;
-
-        return String.format("내 이름은 %s, 나이는 %s살이야." ,this.name, this.age);
+    public String getName(){
+        return name;
     }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+
 }
