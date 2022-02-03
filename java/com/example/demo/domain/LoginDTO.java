@@ -16,7 +16,7 @@ public class LoginDTO {
         private String PW ;
         private String name;
         public static String PASSWORD = "abc";
-        public static String LOGIN_APP = "     <<<LOGIN APP>>>        ";
+        public static String LOGIN_APP = "     <<<LOGIN APP>>>      ";
 
         public String getID(){
                 return ID;
