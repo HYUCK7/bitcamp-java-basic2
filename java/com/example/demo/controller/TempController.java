@@ -1,9 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.domain.GradeDTO;
-
-import java.util.Scanner;
-
 /**
  * packageName: com.example.demo.controller
  * fileName   : TempController
@@ -17,18 +13,13 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("학생의 수:");
-        int count = scanner.nextInt();
-        GradeDTO[] grades = new GradeDTO[count];
+        String[] arr = {"강민", "최건일", "유재혁", "김아름", "장원종",
+                         "DP",  "BIN",   "HASH", "STACK","Brute Force",
+                        "Graph","Greedy","sort",  "Heap",   "DFS",
+                              " " , " ", " ",    "Queue",   "BFS"};
 
-        for(int i = 0; i< grades.length; i++){
-            System.out.println("수학 점수 입력");
-            grades[i] = new GradeDTO();
-            grades[i].setMath(scanner.nextInt());
+            for(int i=0; i<5; i++){
+                System.out.println(arr[i]+ ":" +arr[i+5]+ " " + arr[i+10] +" "+ arr[i+15]);
         }
-        for(int i = 0; i<grades.length; i++){
-            System.out.println("수학 점수: " + grades[i].getMath());
-        }
-}
+    }
 }

@@ -14,7 +14,7 @@ import java.util.Scanner;
  * ================================
  * DATE            AUTHOR         NOTE
  * ================================
- * 2022-01-27         HYUCK7         최초 생성
+ * 2022-01-27 p        HYUCK7         최초 생성
  */
 public class DemoController1 {
     public static void main(String[] args) {

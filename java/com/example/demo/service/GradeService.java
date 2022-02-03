@@ -15,6 +15,8 @@ import com.example.demo.domain.GradeDTO;
  */
 public class GradeService {
     public String execute(GradeDTO grade) {
+
+
         int total = grade.getKor() + grade.getEng() + grade.getMath();
         int avg = total / 3;
         String pass = (avg>=60)?"합격입니다.":"불합격입니다.";
