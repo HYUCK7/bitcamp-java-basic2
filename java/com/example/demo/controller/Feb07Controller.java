@@ -10,7 +10,7 @@ import java.util.Scanner;
  * fileName   : Feb07Controller
  * author     : HYUCK7
  * date       : 2022-02-07
- * desc       :1. 주사위 : dice
+ * desc       : 1. 주사위 : dice
  *              2. 가위바위보: rps
  *              3. 입력 받은 두 수 사이의 있는 소수 구하기 : getPrime
  *              4. 자바로 입력받은 연도가 윤년, 평년: leapYear
@@ -46,7 +46,6 @@ public class Feb07Controller {
                     break;
                 default:
                     System.out.println("NO VALUE");
-
             }
         }
     }
