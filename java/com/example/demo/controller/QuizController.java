@@ -25,7 +25,7 @@ public class QuizController {
         String[] arr = {"강 민", "최건일", "유재혁", "김아름", "장원종",
                 "DP", "BIN", "HASH", "STACK", "Brute Force",
                 "Graph", "Greedy", "sort", "Heap", "DFS",
-                "", "", "", "Queue", "BFS"};
+                 "Queue", "BFS"};
 
         while (true) {
             System.out.println("[MENU] 0.EXIT\n ");
