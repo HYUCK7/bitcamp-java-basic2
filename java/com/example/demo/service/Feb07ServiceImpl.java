@@ -17,20 +17,22 @@ public class Feb07ServiceImpl implements Feb07Service{
     @Override
     public void DICE(Scanner scanner) {
         String res = " ";
-        int num = (int)(Math.random() * 6 +1);
-        if(num==1){
-            res = "1번이 나왔습니다.";
-        }else if(num==2){
-            res = "2번이 나왔습니다.";
-        }else if(num==3){
-            res = "3번이 나왔습니다.";
-        }else if(num==4){
-            res = "4번이 나왔습니다.";
-        }else if(num==5){
-            res = "5번이 나왔습니다.";
-        }if(num==6){
-            res = "6번이 나왔습니다.";
-        }
+        int start = 0;
+        int dice1 = (int) (Math.random() * 6 + 1);
+        int dice2 = (int) (Math.random() * 6 + 1);
+
+        System.out.println("숫자 0을 입력하면 게임이 시작합니다.");
+        if(start == scanner.nextInt()) {
+            System.out.println("사용자가 주사위를 던집니다.");
+            System.out.println(dice1);
+            System.out.println("컴퓨터가 주사위를 던집니다.");
+            System.out.println(dice2);}
+
+            if(dice1>dice2) {
+                res = "사용자가 이겼습니다.";
+            }else if(dice1 == dice2){
+                res = "비겼습니다.";
+            } else res = "컴퓨터가 이겼습니다.";
         System.out.println(res);
     }
 

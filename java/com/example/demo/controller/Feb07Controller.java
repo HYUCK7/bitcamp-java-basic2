@@ -31,19 +31,19 @@ public class Feb07Controller {
                     System.out.println("EXIT"); return;
                 case "1":
                     service.DICE(scanner);
-                    return;
+                    break;
                 case"2":
                     service.RPS(scanner);
-                    return;
+                    break;
                 case"3":
                     service.GetPrime(scanner);
-                    return;
+                    break;
                 case"4":
                     service.LeapYear(scanner);
-                    return;
+                    break;
                 case"5":
                     service.NumberGolf(scanner);
-                    return;
+                    break;
                 default:
                     System.out.println("NO VALUE");
 
