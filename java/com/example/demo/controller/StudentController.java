@@ -36,8 +36,8 @@ public class StudentController {
                 System.out.println("EXIT"); return;
             case "1":
                 System.out.println(BmiDTO.APP_NAME + "\n몸무게는: \n키는: ");
-                bmi.setKg(scanner.nextDouble());
-                bmi.setCm(scanner.nextDouble());
+                bmi.setWeight(scanner.nextDouble());
+                bmi.setTall(scanner.nextDouble());
                 res = Service.getBmi(bmi);
                 break;
             case "2":

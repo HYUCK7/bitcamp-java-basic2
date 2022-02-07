@@ -12,20 +12,25 @@ package com.example.demo.domain;
  * 2022-01-25         HYUCK7         최초 생성
  */
 public class BmiDTO {
-    double kg;
-    double cm;
+    double weight;
+    double tall;
     public static String APP_NAME = "BMI.App";
 
-    public double getKg(){
-        return kg;
+    public double getWeight() {
+        return weight;
     }
-    public void setKg(double kg){
-        this.kg = kg;
+
+    public double getTall() {
+        return tall;
     }
-    public double getCm() {
-        return cm;
+
+    public void setTall(double tall) {
+        this.tall = tall;
     }
-    public void setCm(double cm) {
-        this.cm = cm;
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+
     }
 }
+
