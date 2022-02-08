@@ -1,4 +1,4 @@
-package com.example.demo.phone.service;
+package com.example.demo.OOP.service;
 
 import java.util.Scanner;
 

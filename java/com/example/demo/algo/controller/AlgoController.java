@@ -1,47 +1,114 @@
 package com.example.demo.algo.controller;
 
-import com.example.demo.algo.domain.Queue;
-import com.example.demo.algo.domain.Stack;
+import com.example.demo.algo.service.*;
 
 import java.util.Scanner;
 
 /**
- * packageName: com.example.demo.controller
- * fileName   : DemoController2
+ * packageName: com.example.demo.algo.controller
+ * fileName   : AlgoController
  * author     : HYUCK7
- * date       : 2022-01-27
+ * date       : 2022-02-08
  * desc       :
  * ================================
  * DATE            AUTHOR         NOTE
  * ================================
- * 2022-01-27         HYUCK7         최초 생성
+ * 2022-02-08         HYUCK7         최초 생성
  */
 public class AlgoController {
-    public void execute(Scanner scanner) {
-        Stack stack = new Stack();
-        Queue queue = new Queue();
-        while (true) {
-            System.out.println("[MENU] 0.EXIT\n" +
-                    "[김아름] 1. STACK \t"  +
-                    "2. QUEUE \t" +
-                    "3. HEAP \n" +
-                    "[유재혁] 4. HASH \t" +
-                    "5. SORT \n" +
-                    "[장원종] 6. BRUTE FORCE \t" +
-                    "7. DFS \t" +
-                    "8. BFS \n" +
-                    "[강민] 9. DP \t" +
-                    "10. GRAPH \n" +
-                    "[최건일] 11.BIN SEARCH \t" +
-                    "12.GREEDY");
+    public void execute(Scanner scanner){
+        BfsService bfsService = new BfsServiceImpl();
+        BinaryService binaryService = new BinaryServiceImpl();
+        BruteService bruteService = new BruteServiceImpl();
+        DfsService dfsService = new DfsServiceImpl();
+        DpService dpService = new DpServiceImpl();
+        GraphService graphService = new GraphServiceImpl();
+        GreedyService greedyService = new GreedyServiceImpl();
+        HashService hashService = new HashServiceImpl();
+        HeapService heapService = new HeapServiceImpl();
+        QueueService queueService = new QueueServiceImpl();
+        SortService sortService = new SortServiceImpl();
+        StackService stackService = new StackServiceImpl();
+
+        while (true){
+            System.out.println("[담당] 0. 종료 1. 강민 2. 최건일 3. 유재혁 4. 김아름 5. 장원종");
             switch (scanner.next()){
-                case"0": return;
-                case"1":
-                    System.out.println(stack.solution(null)); break;
-                case"2":
-                    System.out.println(queue.solution(0,0,null));
-                default:
-                    System.out.println("WRONG NUMBER");
+                case "0":
+                    System.out.println("Exit"); return;
+                case "1":
+                    System.out.println("0. 종료  1. Dp  2. Graph");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("Exit"); return;
+                        case "1": break;
+                        case "2": break;
+                    }
+                case "2":
+                    System.out.println("0. 종료 1. Bin  2. Greedy");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("Exit"); return;
+                        case "1":
+                            switch (scanner.next()){
+                                case "0":
+                                    System.out.println("Exit"); return;
+                                case "1":
+                            }
+                            break;
+                        case "2": break;
+                    }
+                case "3":
+                    System.out.println("0. 종료 1. Hash  2. Sort");
+                    switch (scanner.next()) {
+                        case "0":
+                            System.out.println("EXIT"); return;
+                        case "1":
+                        switch (scanner.next()) {
+                            case "0":
+                                System.out.println("Exit");
+                                return;
+                            case "1":
+                                hashService.failedPlayer([],[])
+                                break;
+                            case "2":
+                                hashService.phoneBook();
+                                break;
+                            case "3":
+                                hashService.spy();
+                                break;
+                            case "4":
+                                hashService.bestAlbum();
+                                break;
+                            case "2":
+                                switch (scanner.next()){
+                                    case "0": return;
+                                    case "1":
+                                        sortService.kNum();
+                                    case "2":
+                                        sortService.bigNum();
+                                    case "3":
+                                        sortService.hIndex();
+                                }
+                        }
+                    }
+                case "4":
+                    System.out.println("0. 종료 1. Stack 2. Heap 3. Queue");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("Exit"); return;
+                        case "1": break;
+                        case "2": break;
+                        case "3": break;
+                    }
+                case "5":
+                    System.out.println("0. 종료 1. Brute Force  2. DFS  3. BFS");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("Exit"); return;
+                        case "1": break;
+                        case "2": break;
+                        case "3": break;
+                    }
             }
         }
     }

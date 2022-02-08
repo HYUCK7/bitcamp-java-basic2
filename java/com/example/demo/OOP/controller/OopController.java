@@ -1,7 +1,7 @@
-package com.example.demo.phone.controller;
+package com.example.demo.OOP.controller;
 
-import com.example.demo.phone.service.PhoneService;
-import com.example.demo.phone.service.PhoneServiceImpl;
+import com.example.demo.OOP.service.PhoneService;
+import com.example.demo.OOP.service.PhoneServiceImpl;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08         HYUCK7         최초 생성
  */
-public class PhoneController {
+public class OopController {
     public void execute(Scanner scanner) {
         PhoneService service = new PhoneServiceImpl();
         while(true){
