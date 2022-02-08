@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.demo.algo.controller;
 
-import com.example.demo.algorithm.Queue;
-import com.example.demo.algorithm.Stack;
+import com.example.demo.algo.domain.Queue;
+import com.example.demo.algo.domain.Stack;
 
 import java.util.Scanner;
 
@@ -17,8 +17,7 @@ import java.util.Scanner;
  * 2022-01-27         HYUCK7         최초 생성
  */
 public class AlgoController {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void execute(Scanner scanner) {
         Stack stack = new Stack();
         Queue queue = new Queue();
         while (true) {

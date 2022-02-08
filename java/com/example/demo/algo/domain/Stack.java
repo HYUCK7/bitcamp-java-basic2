@@ -1,4 +1,4 @@
-package com.example.demo.algorithm;
+package com.example.demo.algo.domain;
 
 /**
  * packageName: com.example.demo.algorithm

@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.quiz.service;
 
 /**
  * packageName: com.example.demo.service

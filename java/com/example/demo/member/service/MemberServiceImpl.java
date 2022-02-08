@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.demo.member.service;
 
-import com.example.demo.domain.*;
+import com.example.demo.member.domain.*;
 
 /**
  * packageName: com.example.demo.service
@@ -13,7 +13,7 @@ import com.example.demo.domain.*;
  * ================================
  * 2022-02-07         HYUCK7         최초 생성
  */
-public class StudentServiceImpl implements StudentSevice{
+public class MemberServiceImpl implements MemberSevice {
     /***
      * BMI = w/ (t*t)
      *고도 비만 : 35 이상

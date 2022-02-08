@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.member.domain;
 
 /**
  * packageName: com.example.demo.bmi
@@ -11,7 +11,7 @@ package com.example.demo.domain;
  * ================================
  * 2022-01-25         HYUCK7         최초 생성
  */
-public class BmiDTO {
+public class BmiDTO extends Object {
     double weight;
     double tall;
     public static String APP_NAME = "BMI.App";

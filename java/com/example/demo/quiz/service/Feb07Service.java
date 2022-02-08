@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.quiz.service;
 
 import java.security.Provider;
 import java.util.Scanner;

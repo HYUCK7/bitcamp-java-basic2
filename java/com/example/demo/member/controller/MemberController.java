@@ -1,7 +1,8 @@
-package com.example.demo.controller;
+package com.example.demo.member.controller;
 
-import com.example.demo.domain.*;
-import com.example.demo.service.*;
+import com.example.demo.member.domain.*;
+import com.example.demo.member.service.MemberServiceImpl;
+import com.example.demo.member.service.MemberSevice;
 
 import java.util.Scanner;
 
@@ -16,16 +17,15 @@ import java.util.Scanner;
  * ================================
  * 2022-01-27 p        HYUCK7         최초 생성
  */
-public class StudentController {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class MemberController {
+    public void execute (Scanner scanner) {
         CalcDTO calc = new CalcDTO();
         BmiDTO bmi = new BmiDTO();
         GoogleDTO google = new GoogleDTO();
         GradeDTO grade = new GradeDTO();
         LoginDTO login = new LoginDTO();
         HelloDTO hello = new HelloDTO();
-        StudentSevice Service = new StudentServiceImpl();
+        MemberSevice Service = new MemberServiceImpl();
 
         while(true){
         System.out.println("메뉴 선택");

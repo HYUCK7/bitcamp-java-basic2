@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.demo.quiz.controller;
 
-import com.example.demo.service.Feb07Service;
-import com.example.demo.service.Feb07ServiceImpl;
+import com.example.demo.quiz.service.Feb07Service;
+import com.example.demo.quiz.service.Feb07ServiceImpl;
 
 import java.util.Scanner;
 
@@ -21,8 +21,8 @@ import java.util.Scanner;
  * 2022-02-07         HYUCK7         최초 생성
  */
 public class Feb07Controller {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void execute(Scanner scanner) {
+
         Feb07Service service = new Feb07ServiceImpl();
         while(true){
             System.out.println("0. Exit  1. DICE  2. RPS  3. GetPrime  4. LeapYear  5. NumberGolf");

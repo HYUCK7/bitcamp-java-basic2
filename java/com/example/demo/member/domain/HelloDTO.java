@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.member.domain;
 /**
  * packageName: com.example.hello
  * fileName   : HelloApp.java

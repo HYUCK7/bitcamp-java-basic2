@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.demo.member.service;
 
-import com.example.demo.domain.*;
+import com.example.demo.member.domain.*;
 
 /**
  * packageName: com.example.demo.service
@@ -13,7 +13,7 @@ import com.example.demo.domain.*;
  * ================================
  * 2022-02-07         HYUCK7         최초 생성
  */
-public interface StudentSevice {
+public interface MemberSevice {
     String getBmi(BmiDTO bmi);
     String calc(CalcDTO calc);
     String search(GoogleDTO google);
