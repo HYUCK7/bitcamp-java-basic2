@@ -20,7 +20,7 @@ public class DemoApplication {
 		QuizController quizController = new QuizController();
 		AlgoController algoController = new AlgoController();
 		while(true){
-			System.out.println("### MENU ### 0. EXIT  1 . phone  2.  AUTH  3.  Quiz  4.  Feb07");
+			System.out.println("### MENU ### 0. EXIT  1 . phone  2.  AUTH  3.  Quiz  4.  Algorithm");
 			switch (scanner.next()){
 				case "0":
 					System.out.println("EXIT"); return;

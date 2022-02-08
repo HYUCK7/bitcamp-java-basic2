@@ -1,17 +1,17 @@
 package com.example.demo.quiz.service;
 
 /**
- * packageName: com.example.demo.service
- * fileName   : QuizService
+ * packageName: com.example.demo.quiz.service
+ * fileName   : Feb06Service
  * author     : HYUCK7
- * date       : 2022-02-07
+ * date       : 2022-02-08
  * desc       :
  * ================================
  * DATE            AUTHOR         NOTE
  * ================================
- * 2022-02-07         HYUCK7         최초 생성
+ * 2022-02-08         HYUCK7         최초 생성
  */
-public interface QuizService {
+public interface Feb06Service {
     void quiz1 (String[]arr);
     void quiz2 (String[]arr);
     void quiz3 (String[]arr);

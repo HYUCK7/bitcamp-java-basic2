@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 2022-02-08         HYUCK7         최초 생성
  */
 public class AlgoController {
-    public void execute(Scanner scanner){
+    public void execute(Scanner scanner) {
         BfsService bfsService = new BfsServiceImpl();
         BinaryService binaryService = new BinaryServiceImpl();
         BruteService bruteService = new BruteServiceImpl();
@@ -30,86 +30,104 @@ public class AlgoController {
         SortService sortService = new SortServiceImpl();
         StackService stackService = new StackServiceImpl();
 
-        while (true){
+        while (true) {
             System.out.println("[담당] 0. 종료 1. 강민 2. 최건일 3. 유재혁 4. 김아름 5. 장원종");
-            switch (scanner.next()){
+            switch (scanner.next()) {
                 case "0":
-                    System.out.println("Exit"); return;
+                    System.out.println("Exit");
+                    return;
                 case "1":
                     System.out.println("0. 종료  1. Dp  2. Graph");
-                    switch (scanner.next()){
+                    switch (scanner.next()) {
                         case "0":
-                            System.out.println("Exit"); return;
-                        case "1": break;
-                        case "2": break;
+                            System.out.println("Exit");
+                            return;
+                        case "1":
+                            break;
+                        case "2":
+                            break;
                     }
                 case "2":
                     System.out.println("0. 종료 1. Bin  2. Greedy");
-                    switch (scanner.next()){
+                    switch (scanner.next()) {
                         case "0":
-                            System.out.println("Exit"); return;
+                            System.out.println("Exit");
+                            return;
                         case "1":
-                            switch (scanner.next()){
+                            switch (scanner.next()) {
                                 case "0":
-                                    System.out.println("Exit"); return;
+                                    System.out.println("Exit");
+                                    return;
                                 case "1":
                             }
                             break;
-                        case "2": break;
+                        case "2":
+                            break;
                     }
                 case "3":
                     System.out.println("0. 종료 1. Hash  2. Sort");
                     switch (scanner.next()) {
                         case "0":
-                            System.out.println("EXIT"); return;
+                            System.out.println("EXIT");
+                            return;
                         case "1":
-                        switch (scanner.next()) {
-                            case "0":
-                                System.out.println("Exit");
-                                return;
-                            case "1":
-                                hashService.failedPlayer([],[])
-                                break;
-                            case "2":
-                                hashService.phoneBook();
-                                break;
-                            case "3":
-                                hashService.spy();
-                                break;
-                            case "4":
-                                hashService.bestAlbum();
-                                break;
-                            case "2":
-                                switch (scanner.next()){
-                                    case "0": return;
+                            System.out.println("0. 종료 1. 완주하지 못한 선수 2. 전화번호 목록 3.   ");
+                            switch (scanner.next()) {
+                                case "0":
+                                    System.out.println("Exit");
+                                    return;
                                     case "1":
-                                        sortService.kNum();
+                                        break;
                                     case "2":
-                                        sortService.bigNum();
+                                        break;
                                     case "3":
-                                        sortService.hIndex();
+                                        break;
+                                    case "4":
+                                        break;
                                 }
-                        }
-                    }
+
+                                case "2":
+                                    switch (scanner.next()) {
+                                        case "0":
+                                            return;
+                                        case "1":
+                                            break;
+                                        case "2":
+                                            break;
+                                        case "3":
+                                            break;
+
+                                    }
+                            }
+
                 case "4":
                     System.out.println("0. 종료 1. Stack 2. Heap 3. Queue");
-                    switch (scanner.next()){
+                    switch (scanner.next()) {
                         case "0":
-                            System.out.println("Exit"); return;
-                        case "1": break;
-                        case "2": break;
-                        case "3": break;
+                            System.out.println("Exit");
+                            return;
+                        case "1":
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
                     }
                 case "5":
                     System.out.println("0. 종료 1. Brute Force  2. DFS  3. BFS");
-                    switch (scanner.next()){
+                    switch (scanner.next()) {
                         case "0":
-                            System.out.println("Exit"); return;
-                        case "1": break;
-                        case "2": break;
-                        case "3": break;
+                            System.out.println("Exit");
+                            return;
+                        case "1":
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
                     }
             }
         }
     }
 }
+
