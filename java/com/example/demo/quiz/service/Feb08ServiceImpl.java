@@ -38,20 +38,17 @@ public class Feb08ServiceImpl implements Feb08Service {
     @Override
     public void gugudan(Scanner scanner) {
         System.out.println("5. 구구단");
-        for (int i = 1; i < 10; i++) {
-            System.out.println(" ### " + i + "단 ###");
-            for (int j = 1; j < 10; j++) {
-                System.out.println(i + " x " + j + " = " + i * j);
-                /**
-                 *  System.out.println("5. 구구단" + "\n" + "   *** 몇 단을 출력할까요 ***    ");
-                 *         String result = "";
-                 *         int i = scanner.nextInt();
-                 *         System.out.println("    ###    " + i + "단    ###    ");
-                 *         for (int j = 1; j < 10; j++) {
-                 *             result = String.format("%d x %d = %d", i, j, (i * j));
-                 *             System.out.print(result + "\t");
-                 */
+        for (int i = 2; i < 10; i +=4){
+            for (int j = 1; j <= 9; j++){
+                for (int k = i; k < i+4; k++){
+                    System.out.print(k + "*" + j + "="+(k*j)+"\t");
+                }
+                System.out.print("\n");
             }
+            System.out.println("\n");
         }
     }
 }
+
+
+
