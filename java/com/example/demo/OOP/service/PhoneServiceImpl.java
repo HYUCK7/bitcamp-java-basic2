@@ -1,5 +1,10 @@
 package com.example.demo.OOP.service;
 
+import com.example.demo.OOP.domain.CellPhone;
+import com.example.demo.OOP.domain.GalPhone;
+import com.example.demo.OOP.domain.IPhone;
+import com.example.demo.OOP.domain.Phone;
+
 import java.util.Scanner;
 
 /**
@@ -14,24 +19,23 @@ import java.util.Scanner;
  * 2022-02-08         HYUCK7         최초 생성
  */
 public class PhoneServiceImpl implements PhoneService {
-
     @Override
-    public void usePhone(Scanner scanner) {
-        System.out.println("집전화");
+    public void usePhone(Phone phone) {
+        System.out.println(phone.toString());
     }
 
     @Override
-    public void useCellPhone(Scanner scanner) {
-        System.out.println("휴대폰");
+    public void useCellPhone(CellPhone phone) {
+        System.out.println(phone.toString());
     }
 
     @Override
-    public void useIPhone(Scanner scanner) {
-        System.out.println("아이폰");
+    public void useIPhone(IPhone phone) {
+        System.out.println(phone.toString());
     }
 
     @Override
-    public void useGalPhone(Scanner scanner) {
-        System.out.println("갤럭시노트");
+    public void useGalPhone(GalPhone phone) {
+        System.out.println(phone.toString());
     }
 }

@@ -1,5 +1,10 @@
 package com.example.demo.OOP.service;
 
+import com.example.demo.OOP.domain.CellPhone;
+import com.example.demo.OOP.domain.GalPhone;
+import com.example.demo.OOP.domain.IPhone;
+import com.example.demo.OOP.domain.Phone;
+
 import java.util.Scanner;
 
 /**
@@ -14,8 +19,8 @@ import java.util.Scanner;
  * 2022-02-08         HYUCK7         최초 생성
  */
 public interface PhoneService {
-    void usePhone(Scanner scanner);
-    void useCellPhone(Scanner scanner);
-    void useIPhone(Scanner scanner);
-    void useGalPhone(Scanner scanner);
+    void usePhone(Phone phone);
+    void useCellPhone(CellPhone phone);
+    void useIPhone(IPhone phone);
+    void useGalPhone(GalPhone phone);
 }
