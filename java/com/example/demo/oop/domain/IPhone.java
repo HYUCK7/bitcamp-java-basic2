@@ -1,4 +1,5 @@
-package com.example.demo.OOP.domain;
+package com.example.demo.oop.domain;
+
 
 /**
  * packageName: com.example.demo.OOP.domain
@@ -16,8 +17,9 @@ public class IPhone extends CellPhone {
    protected String search;
 
    public IPhone(String company){
-       super(KIND,company,"이동중");
+       super(KIND,company,"move");
    }
+
     public String getSearch() {
         return search;
     }

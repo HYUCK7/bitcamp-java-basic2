@@ -1,11 +1,11 @@
-package com.example.demo.OOP.controller;
+package com.example.demo.oop.controller;
 
-import com.example.demo.OOP.domain.CellPhone;
-import com.example.demo.OOP.domain.GalPhone;
-import com.example.demo.OOP.domain.IPhone;
-import com.example.demo.OOP.domain.Phone;
-import com.example.demo.OOP.service.PhoneService;
-import com.example.demo.OOP.service.PhoneServiceImpl;
+import com.example.demo.oop.domain.CellPhone;
+import com.example.demo.oop.domain.GalPhone;
+import com.example.demo.oop.domain.IPhone;
+import com.example.demo.oop.domain.Phone;
+import com.example.demo.oop.service.PhoneService;
+import com.example.demo.oop.service.PhoneServiceImpl;
 
 import java.util.Scanner;
 

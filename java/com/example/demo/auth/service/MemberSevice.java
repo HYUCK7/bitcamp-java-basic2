@@ -1,6 +1,6 @@
-package com.example.demo.member.service;
+package com.example.demo.auth.service;
 
-import com.example.demo.member.domain.*;
+import com.example.demo.auth.domain.*;
 
 /**
  * packageName: com.example.demo.service
@@ -19,6 +19,6 @@ public interface MemberSevice {
     String search(GoogleDTO google);
     String getGrade(GradeDTO grade);
     String hello(HelloDTO hello);
-    String login(LoginDTO login);
+    String login(UserDTO login);
 
 }

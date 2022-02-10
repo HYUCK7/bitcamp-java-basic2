@@ -1,8 +1,8 @@
-package com.example.demo.member.controller;
+package com.example.demo.auth.controller;
 
-import com.example.demo.member.domain.*;
-import com.example.demo.member.service.MemberServiceImpl;
-import com.example.demo.member.service.MemberSevice;
+import com.example.demo.auth.domain.*;
+import com.example.demo.auth.service.MemberServiceImpl;
+import com.example.demo.auth.service.MemberSevice;
 
 import java.util.Scanner;
 
@@ -19,12 +19,6 @@ import java.util.Scanner;
  */
 public class MemberController {
     public void execute (Scanner scanner) {
-        CalcDTO calc = new CalcDTO();
-        BmiDTO bmi = new BmiDTO();
-        GoogleDTO google = new GoogleDTO();
-        GradeDTO grade = new GradeDTO();
-        LoginDTO login = new LoginDTO();
-        HelloDTO hello = new HelloDTO();
         MemberSevice Service = new MemberServiceImpl();
 
         while(true){
@@ -36,42 +30,48 @@ public class MemberController {
                 System.out.println("EXIT"); return;
             case "1":
                 System.out.println(BmiDTO.APP_NAME + "\n몸무게는: \n키는: ");
-                bmi.setWeight(scanner.nextDouble());
-                bmi.setTall(scanner.nextDouble());
-                res = Service.getBmi(bmi);
+                BmiDTO b = BmiDTO.getInstance();
+                b.setWeight(scanner.nextDouble());
+                b.setTall(scanner.nextDouble());
+                res = Service.getBmi(b);
                 break;
             case "2":
                 System.out.println(CalcDTO.CALC_APP + "\n첫 번째 숫자: \n연산기호: \n두 번째 숫자: ");
-                calc.setNum1(scanner.nextInt());
-                calc.setOpcode(scanner.next());
-                calc.setNum2(scanner.nextInt());
-                res = Service.calc(calc);
+                CalcDTO c = CalcDTO.getInstance();
+                c.setNum1(scanner.nextInt());
+                c.setOpcode(scanner.next());
+                c.setNum2(scanner.nextInt());
+                res = Service.calc(c);
                 break;
             case "3":
                 System.out.println(GoogleDTO.WEB_LOGO + "\n검색어를 입력하세요 : ");
-                google.setUrl(scanner.next());
-                res = Service.search(google);
+                GoogleDTO g = GoogleDTO.getInstance();
+                g.setUrl(scanner.next());
+                res = Service.search(g);
                 break;
             case "4":
                 System.out.println(GradeDTO.GRADE_MARK + "\n 이름: 국어: 영어: 수학: ");
-                grade.setName(scanner.next());
-                grade.setKor(scanner.nextInt());
-                grade.setEng(scanner.nextInt());
-                grade.setMath(scanner.nextInt());
-                res = Service.getGrade(grade);
+                GradeDTO r = GradeDTO.getInstance();
+                r.setName(scanner.next());
+                r.setKor(scanner.nextInt());
+                r.setEng(scanner.nextInt());
+                r.setMath(scanner.nextInt());
+                res = Service.getGrade(r);
                 break;
             case "5":
-                System.out.println(LoginDTO.LOGIN_APP + "\nID: \nPW: \nNAME: ");
-                login.setID(scanner.next());
-                login.setPW(scanner.next());
-                login.setName(scanner.next());
-                res = Service.login(login);
+                System.out.println(UserDTO.LOGIN_APP + "\nID: \nPW: \nNAME: ");
+                UserDTO u = UserDTO.getInstance();
+                u.setID(scanner.next());
+                u.setPW(scanner.next());
+                u.setName(scanner.next());
+                res = Service.login(u);
                 break;
             case "6":
                 System.out.println(HelloDTO.HELLO_APP + "\nname : \nage: ");
-                hello.setName(scanner.next());
-                hello.setAge(scanner.nextInt());
-                res = Service.hello(hello);
+                HelloDTO h = HelloDTO.getInstance();
+                h.setName(scanner.next());
+                h.setAge(scanner.nextInt());
+                res = Service.hello(h);
                 break;
 
             default:

@@ -1,4 +1,5 @@
-package com.example.demo.member.domain;
+package com.example.demo.auth.domain;
+
 /**
  * packageName: com.example.calc
  * fileName   : CalcApp.java
@@ -11,13 +12,18 @@ package com.example.demo.member.domain;
  * 2022-01-24         HYUCK7        최초 생성
  * * 2022-01-26       HYUCK7        if절 추가 및 4칙 연산 가능하도록 개선
  */
-public class CalcDTO {
+public class CalcDTO{
+        private final static CalcDTO calcDTO = new CalcDTO();
+        private CalcDTO() {}
+        public static CalcDTO getInstance(){return calcDTO;}
+
         private int num1;
         private String opcode;
         private int num2;
         public static String CALC_APP ="   <<<Calc.com>>>  ";
 
-        public int getNum1(){
+
+    public int getNum1(){
             return num1;
         }
         public void setNum1(int num1){
@@ -36,5 +42,6 @@ public class CalcDTO {
             this.num2 = num2;
         }
 
+        }
 
-}
+

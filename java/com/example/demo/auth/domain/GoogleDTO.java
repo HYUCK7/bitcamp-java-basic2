@@ -1,4 +1,4 @@
-package com.example.demo.member.domain;
+package com.example.demo.auth.domain;
 
 /**
  * packageName: com.example.demo.google
@@ -14,6 +14,10 @@ package com.example.demo.member.domain;
  * 2022-01-25         HYUCK7         최초 생성
  */
 public class GoogleDTO {
+    private final static GoogleDTO googleDTO = new GoogleDTO(); // 객체 생성은 하나
+    private GoogleDTO(){}
+    public static GoogleDTO getInstance(){return googleDTO;}
+
     public static String WEB_LOGO = "        Google          ";
     private String url;
 

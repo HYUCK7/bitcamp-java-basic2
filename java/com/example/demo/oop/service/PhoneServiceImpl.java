@@ -1,11 +1,9 @@
-package com.example.demo.OOP.service;
+package com.example.demo.oop.service;
 
-import com.example.demo.OOP.domain.CellPhone;
-import com.example.demo.OOP.domain.GalPhone;
-import com.example.demo.OOP.domain.IPhone;
-import com.example.demo.OOP.domain.Phone;
-
-import java.util.Scanner;
+import com.example.demo.oop.domain.CellPhone;
+import com.example.demo.oop.domain.GalPhone;
+import com.example.demo.oop.domain.IPhone;
+import com.example.demo.oop.domain.Phone;
 
 /**
  * packageName: com.example.demo.service

@@ -1,4 +1,4 @@
-package com.example.demo.member.domain;
+package com.example.demo.auth.domain;
 /**
  * packageName: com.example.login
  * fileName   : LoginApp.java
@@ -11,7 +11,11 @@ package com.example.demo.member.domain;
  * 2022-01-24       HYUCK7        최초 생성
  * 2022-01-26       HYUCK7        if절 추가
  */
-public class LoginDTO {
+public class UserDTO {
+        private final static UserDTO userDTO = new UserDTO();
+        private UserDTO(){}
+        public static UserDTO getInstance(){return userDTO;}
+
         private String ID;
         private String PW ;
         private String name;

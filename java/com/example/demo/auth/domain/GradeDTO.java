@@ -1,4 +1,4 @@
-package com.example.demo.member.domain;
+package com.example.demo.auth.domain;
 
 /**
  * packageName: com.example.demo.grade
@@ -12,6 +12,9 @@ package com.example.demo.member.domain;
  * 2022-01-26         HYUCK7         최초 생성
  */
 public class GradeDTO {
+    private final static GradeDTO gradeDTO = new GradeDTO(); // 고유한 객체를 전역으로 생성
+    private GradeDTO(){} // 외부에서부터 값을 받기 위한 생성자???????????
+    public static GradeDTO getInstance(){return gradeDTO;}
     public static String GRADE_MARK = "성적표";
     String name;
     int kor;

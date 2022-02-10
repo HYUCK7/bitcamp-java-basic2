@@ -1,4 +1,4 @@
-package com.example.demo.member.domain;
+package com.example.demo.auth.domain;
 /**
  * packageName: com.example.hello
  * fileName   : HelloApp.java
@@ -11,6 +11,10 @@ package com.example.demo.member.domain;
  * 2022-01-24         HYUCK7        최초 생성
  */
 public class HelloDTO {
+    private final static HelloDTO helloDTO = new HelloDTO();
+    private HelloDTO(){}
+    public static HelloDTO getInstance(){return helloDTO;}
+
     String name;
     int age;
     public static String HELLO_APP = "헬로우 앱";

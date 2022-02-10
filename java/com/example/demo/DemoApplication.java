@@ -2,10 +2,10 @@ package com.example.demo;
 
 import com.example.demo.algo.controller.AlgoController;
 import com.example.demo.quiz.controller.QuizController;
-import com.example.demo.member.controller.MemberController;
+import com.example.demo.auth.controller.MemberController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.example.demo.OOP.controller.OopController;
+import com.example.demo.oop.controller.OopController;
 
 import java.util.Scanner;
 

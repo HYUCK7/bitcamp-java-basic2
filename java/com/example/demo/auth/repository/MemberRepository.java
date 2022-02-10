@@ -1,4 +1,4 @@
-package com.example.demo.member.repository;
+package com.example.demo.auth.repository;
 
 /**
  * packageName: com.example.demo.student.repository

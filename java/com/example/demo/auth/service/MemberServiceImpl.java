@@ -1,6 +1,6 @@
-package com.example.demo.member.service;
+package com.example.demo.auth.service;
 
-import com.example.demo.member.domain.*;
+import com.example.demo.auth.domain.*;
 
 /**
  * packageName: com.example.demo.service
@@ -14,6 +14,7 @@ import com.example.demo.member.domain.*;
  * 2022-02-07         HYUCK7         최초 생성
  */
 public class MemberServiceImpl implements MemberSevice {
+
     /***
      * BMI = w/ (t*t)
      *고도 비만 : 35 이상
@@ -84,9 +85,9 @@ public class MemberServiceImpl implements MemberSevice {
     }
 
     @Override
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         String res ="";
-        return res = (login.getPW().equals(LoginDTO.PASSWORD))?
+        return res = (login.getPW().equals(UserDTO.PASSWORD))?
                 String.format(" %s 님의 비밀번호 %s가 맞습니다. 로그인 성공 "
                         , login.getName(), login.getPW())
                 : String.format(" %s 님의 ID는 맞으나, PW %s 가 틀립니다. 로그인 실패 "
